@@ -51,7 +51,7 @@ namespace BankAPPWeb.accountDAO
             */
             string selectloginQuery = " SELECT  UserID, UserName  FROM Customers where UserID = " + UserID + " AND PIN = " + PIN;
             SqliteCommand view = new SqliteCommand(selectloginQuery, conn);
-            //logger.logo conn.ConnectionString()
+            logger.LogError($"Connection which has been used {conn.ConnectionString}");
             conn.Open();
             SqliteDataReader dr = view.ExecuteReader();
             User user1 = new User();
