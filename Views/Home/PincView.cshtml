@@ -1,0 +1,30 @@
+﻿    @{
+        Layout = null;
+    }
+
+        <html>
+        <head>
+            <title>ABC BANK ATM</title>
+            <link rel="stylesheet" type="text/css" href="~/css/site.css">
+            <link rel="stylesheet" type="text/css" href="~/css/Bootstarp.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+            <div id="center">
+            <form method="POST" action="/Home/PinChange">
+                <label id="label">Enter your old PIN:</label>
+                <input id="pin1" name="pin1" type='number' min="1111" max="9999">
+                <br><br>
+                <label id="label">Confrim your old PIN:</label>
+                <input id="pin2" name="pin2" type='number' min="1111" max="9999">
+                <br><br>
+                <label id="label">Enter a new PIN:</label>
+                <input id="pin3" name="pin3" type='number' min="1111" max="9999">
+                <br><br>
+                <button id="Mainbtn">SUBMIT</button>
+                <input type="button" value="Main Menu" id="Mainbtn" onclick="history.back()" />
+            </form>
+            </div>
+        </body>
+        </html>
+

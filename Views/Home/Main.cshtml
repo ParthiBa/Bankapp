@@ -1,0 +1,26 @@
+﻿@{
+    var id = ViewData["UserID1"];
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>ABC BANK ATM</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Bootstarp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form method="POST" action="/Home/Display">
+        <div class="MainPage">
+            <br><a id="BalanceCheckbtn" href="/Home/Display">View Balance</a><br>
+            <a id="DepositAmount" href="/Home/DepositView">Deposit</a><br>
+            <a id="WithdrawAmount" href="/Home/WithdrawView">Withdraw</a><br>
+            <a id="TransferAmount" href="/Home/TransferView">Transfer</a><br>
+            <a id="PINChange" href="/Home/PincView">Change PIN</a><br>
+            <a id="TransLog" href="/Home/TransLogView">View Transation History</a><br>
+            <a id="logout" href="/Home/Logouts">Logout</a>
+        </div>
+    </form>
+</body>
+</html>

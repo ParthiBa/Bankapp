@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+    var id = ViewData["UserID1"];
+    var pin = ViewData["PIN"];
+}
+<html>
+<head>
+    <title>ABC BANK ATM</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Bootstarp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="center">
+    <form method="POST" action="/Home/Deposit">
+        <br><br><br><label id="label">Enter the Amount to Deposit:</label>
+        <input id="Amt" name="amt" type='number' min="1">
+        <br><br><br>
+        <button id="Mainbtn">SUBMIT</button>
+        <input type="button" id="Mainbtn" value="Main Menu" onclick="history.back()" />
+        <script src="~/lib/jquery.js"></script>
+        <script type="text/javascript" src="~/js/site.js"></script>
+    </form>
+    </div>
+</body>
+</html>
+ 

@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+    @model IEnumerable<BankAPPWeb.Model.User>
+}
+<html>
+<head>
+    <title>ABC BANK ATM</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Bootstarp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="center">
+    <table class="table">
+        <tr>
+            <th>Transation ID</th>
+            <th>Transation Type</th>
+            <th>Amount</th>
+            <th>Dated</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TransID</td>
+                <td>@item.CD</td>
+                <td>@item.Amount</td>
+                <td>@item.Dated</td>
+            </tr>
+        }
+    </table>
+    <input type="button" value="Main Menu" id="Mainbtn" onclick="history.back()" />
+    </div>
+</body>
+</html>

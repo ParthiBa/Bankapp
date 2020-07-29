@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+    var st = ViewData["st"];
+}
+<html>
+<head>
+    <title>ABC BANK ATM</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Bootstarp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="center"> 
+    <form method="POST" action="/Home/Withdraw">
+        <p>@st</p>
+        <label id="label">Enter the Amount to Withdraw:</label>
+        <input id="Amt" name="amt" type='number' min="1">
+        <br><br>
+        <button id="Mainbtn">SUBMIT</button>
+        <input type="button" value="Main Menu" id="Mainbtn" onclick="history.back()" />
+    </form> 
+    </div>
+</body>
+</html>
+ 

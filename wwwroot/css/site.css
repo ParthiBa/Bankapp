@@ -1,0 +1,160 @@
+﻿body {
+    height: 100%;
+    background-image: linear-gradient(mediumpurple, white);
+}
+
+#loginpage {
+    text-align: center;
+    margin-top: 50px;
+    border:dashed;
+    margin-bottom:initial;
+}
+
+#label {
+    font-family:'Adobe Devanagari';
+}
+
+#userid::-webkit-outer-spin-button,
+#userid::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin:0;
+}
+
+#pin::-webkit-outer-spin-button,
+#pin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin:0;
+}
+#userid,#pin {
+    padding: 20px;
+    height: 20px;
+    width: 100px;
+    text-align: left;
+}
+
+#loginbtn {
+    padding: 20px;
+    height: 50px;
+    background-color:burlywood;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Adobe Devanagari';
+    font-size: xx-large;
+}
+
+#totcount1 {
+    text-align: center;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Adobe Arabic';
+    font-size: large;
+    padding: 5px;
+}
+
+#top1 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Adobe Arabic';
+    font-size: large;
+    padding: 5px;
+}
+.MainPage {
+    text-align: center;
+}
+#Dropdown {
+    font-family: 'Adobe Devanagari';
+    padding: 15px;
+}
+
+
+#TransLog {
+    display: block;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#WithdrawAmount, #TransferAmount, #DepositAmount, #PINChange, #BalanceCheckbtn {
+    display: block;
+    width: 150px;
+    height: 15px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#logout  {
+    display: block;
+    width: 150px;
+    height: 15px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color:red;
+    font-weight: bold;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+#ViewBtn {
+    background-color:lightblue;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    width:200px;
+}
+
+#Submit {
+    background-color:wheat;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+}
+
+#Error {
+    color:red;
+}
+
+#center {
+    text-align:center;
+}
+
+#Mainbtn {
+    padding: 20px;
+    height: 50px;
+    border-radius: 25px;
+    background-color:dodgerblue;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    align-content: center;
+}
+
+#Amt,#id2 , #pin1, #pin2, #pin3{
+    padding: 20px;
+    height: 20px;
+    width: 300px;
+    border-radius: 20px;
+    text-align: left;
+    background-color: cornsilk;
+}
