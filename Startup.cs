@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Data.Sqlite;
 
 namespace BankAPPWeb
 {
@@ -34,6 +36,7 @@ namespace BankAPPWeb
             var bank=new Banks.Bank(dao);
             services.AddSingleton(dao);
             services.AddSingleton(bank);
+            this.checkAndSeedDatabase(logger);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +68,29 @@ namespace BankAPPWeb
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private void checkAndSeedDatabase(ILogger logger)
+        {
+            string script = File.ReadAllText("seed.sql");
+            SqliteConnectionStringBuilder connectionStringBuilder = new SqliteConnectionStringBuilder(); ;
+            connectionStringBuilder.DataSource = "./BankAPP_Data.db";
+            connectionStringBuilder.Mode = SqliteOpenMode.ReadWriteCreate;
+            SqliteConnection conn = new SqliteConnection(connectionStringBuilder.ConnectionString);
+            string query =@"SELECT count(name) FROM sqlite_master WHERE type='table' AND name='Customers';";
+            SqliteCommand readcomm = new SqliteCommand(query, conn);
+            conn.Open();
+            int colstatus  = Convert.ToInt32(readcomm.ExecuteScalar());
+            if(colstatus==0)
+            {
+                logger.LogError("Database is empty -------------------");
+                logger.LogInformation($"length of script {script.Length}");
+            }
+            else 
+            {
+                logger.LogInformation($"Database has tables");
+            }
+            conn.Close();
         }
     }
 }

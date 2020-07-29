@@ -23,6 +23,8 @@
     </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\User\" />
+      <Content Include="BankAPP_Data.db" CopyToPublishDirectory="Always" />
+      <Content Include="seed.sql" CopyToPublishDirectory="Always" />
   </ItemGroup>
 
 </Project>
