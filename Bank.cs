@@ -8,9 +8,9 @@ namespace BankAPPWeb.Banks
     {
         public int UserID = 0, PIN = 0, UserName = 0, UserID2 = 0, ToAmount = 0;
         AccountDAO accountdao;
-        public Bank()
+        public Bank(AccountDAO accountDAO)
         {
-            this.accountdao = new AccountDAO();
+            this.accountdao = accountDAO;
         }
         public User LoginUser(int UserID, int PIN)
         {

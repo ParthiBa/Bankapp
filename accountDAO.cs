@@ -3,6 +3,7 @@ using System.Data;
 //using MySql.Data.MySqlClient;
 using BankAPPWeb.Model;
 using Microsoft.Data.Sqlite;
+using Microsoft.Extensions.Logging;
 
 namespace BankAPPWeb.accountDAO
 {
@@ -11,7 +12,8 @@ namespace BankAPPWeb.accountDAO
         //MySqlConnection conn;
         //string myConnectionString;
         private readonly SqliteConnection conn;
-        public AccountDAO()
+        private readonly ILogger logger;
+        public AccountDAO(ILogger logger)
         {
             /*IConfiguration Configuration = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -26,6 +28,7 @@ namespace BankAPPWeb.accountDAO
             connectionStringBuilder.DataSource = "./BankAPP_Data.db";
             connectionStringBuilder.Mode = SqliteOpenMode.ReadWriteCreate;
             conn = new SqliteConnection(connectionStringBuilder.ConnectionString);
+            this.logger = logger;
         }
         public User Login(int UserID, int PIN)
         {
@@ -48,6 +51,7 @@ namespace BankAPPWeb.accountDAO
             */
             string selectloginQuery = " SELECT  UserID, UserName  FROM Customers where UserID = " + UserID + " AND PIN = " + PIN;
             SqliteCommand view = new SqliteCommand(selectloginQuery, conn);
+            //logger.logo conn.ConnectionString()
             conn.Open();
             SqliteDataReader dr = view.ExecuteReader();
             User user1 = new User();

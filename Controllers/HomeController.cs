@@ -9,9 +9,9 @@ namespace BankAPPWeb.Controllers
     public class HomeController : Controller
     {
         Bank bank;
-        public HomeController()
+        public HomeController(Bank bank)
         {
-            this.bank = new Bank();
+            this.bank =bank;
         }
         public IActionResult Index()
         {
