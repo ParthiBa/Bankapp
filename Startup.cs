@@ -36,7 +36,7 @@ namespace BankAPPWeb
             var bank=new Banks.Bank(dao);
             services.AddSingleton(dao);
             services.AddSingleton(bank);
-            this.checkAndSeedDatabase(logger);
+           // this.checkAndSeedDatabase(logger);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
