@@ -13,7 +13,7 @@ namespace BankAPPWeb.accountDAO
         //string myConnectionString;
         private readonly SqliteConnection conn;
         private readonly ILogger logger;
-        public AccountDAO(ILogger logger)
+        public AccountDAO(ILoggerFactory loggerFactory)
         {
             /*IConfiguration Configuration = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -28,7 +28,7 @@ namespace BankAPPWeb.accountDAO
             connectionStringBuilder.DataSource = "./BankAPP_Data.db";
             connectionStringBuilder.Mode = SqliteOpenMode.ReadWriteCreate;
             conn = new SqliteConnection(connectionStringBuilder.ConnectionString);
-            this.logger = logger;
+            this.logger = loggerFactory.CreateLogger(typeof(AccountDAO));
         }
         public User Login(int UserID, int PIN)
         {
