@@ -19,6 +19,7 @@
      <PackageReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.2" />
      <PackageReference Include="MySql.Data" Version="8.0.19" />
      <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+     <PackageReference Include="Npgsql" Version="4.1.4" />
      <PackageReference Include="System.Windows.Extensions" Version="4.7.0" />
     </ItemGroup>
   <ItemGroup>

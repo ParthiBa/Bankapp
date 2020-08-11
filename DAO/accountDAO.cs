@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace BankAPPWeb.accountDAO
 {
-    public class AccountDAO
+    public class AccountDAO : IAccountDAO
     {
         //MySqlConnection conn;
         //string myConnectionString;

@@ -7,8 +7,8 @@ namespace BankAPPWeb.Banks
     public class Bank
     {
         public int UserID = 0, PIN = 0, UserName = 0, UserID2 = 0, ToAmount = 0;
-        AccountDAO accountdao;
-        public Bank(AccountDAO accountDAO)
+        IAccountDAO accountdao;
+        public Bank(IAccountDAO accountDAO)
         {
             this.accountdao = accountDAO;
         }

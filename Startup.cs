@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Data.Sqlite;
+using BankAPPWeb.accountDAO;
 
 namespace BankAPPWeb
 {
@@ -40,7 +41,8 @@ namespace BankAPPWeb
             */
             services.AddLogging();
             //services.AddSingleton(typeof(ILogger<accountDAO.AccountDAO>),logger);
-            services.AddTransient(typeof(accountDAO.AccountDAO));
+            //services.AddTransient(typeof(IAccountDAO),  typeof(accountDAO.AccountDAO));
+            services.AddTransient(typeof(IAccountDAO),  typeof(accountDAO.PostGresAccountDAO));
             services.AddTransient(typeof(Banks.Bank));
             //services.AddTransient<ILogger<accountDAO.AccountDAO>>();
            // this.checkAndSeedDatabase(logger);
