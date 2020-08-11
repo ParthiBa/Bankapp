@@ -211,7 +211,7 @@ namespace BankAPPWeb.accountDAO
                 Tran.CD = reader.GetString(1);
                 Tran.Amount = reader.GetInt32(2);
                 Tran.AccountNo = reader.GetInt32(3);
-                Tran.Dated = reader.GetString(5);
+                Tran.Dated = reader.GetDate(5).ToString();
                 Tran1[i] = Tran;
                 i++;
             }
